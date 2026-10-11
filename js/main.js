@@ -153,4 +153,46 @@ document.addEventListener('DOMContentLoaded', () => {
       out.textContent = 'Votre IMC est de ' + bmi.toFixed(1).replace('.', ',') + ' : ' + label + '.';
     });
   }
+  /* ---------- Barre de progression de lecture ---------- */
+  const progress = document.createElement('div');
+  progress.className = 'reading-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    progress.style.transform = 'scaleX(' + ratio + ')';
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* ---------- Compteurs animés pour les statistiques ---------- */
+  const statNumbers = document.querySelectorAll('.stats-section strong');
+  if ('IntersectionObserver' in window && statNumbers.length) {
+    const statObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const original = el.textContent.trim();
+        const match = original.match(/^(\d+)(.*)$/);
+        if (match) {
+          const target = Number(match[1]);
+          const suffix = match[2];
+          const duration = 900;
+          const start = performance.now();
+          const tick = now => {
+            const progressValue = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - progressValue, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (progressValue < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.55 });
+    statNumbers.forEach(el => statObserver.observe(el));
+  }
+
 });
