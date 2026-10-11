@@ -8,7 +8,7 @@ Site vitrine responsive pour une salle de sport.
 - Programmes
 - Coachs
 - Tarifs
-- Planning
+- Karaté
 - Galerie
 - Contact
 - Inscription (envoi via WhatsApp)
@@ -32,14 +32,15 @@ Site vitrine responsive pour une salle de sport.
 ## Installation
 Aucune installation obligatoire. Ouvrir `index.html` dans un navigateur ou lancer le dossier avec Live Server dans VS Code.
 
+## Tarifs et horaires intégrés
+Les tarifs de coaching personnel, musculation/fitness, karaté et massage sur rendez-vous sont affichés dans la page Tarifs. La page Karaté présente les catégories et horaires communiqués.
+
 ## À personnaliser avant publication
 - adresse exacte
 - numéro de téléphone
 - email
-- tarifs officiels
-- horaires officiels
+- confirmer les tarifs et horaires auprès de la salle avant publication
 - noms/photos réels des coachs
-- planning réel
 - photos de KEB'S SPORT
 - numéro WhatsApp : variable `KEBS_WHATSAPP` en haut de `js/main.js` (utilisée par les formulaires Inscription et Contact)
 - images : logo dans `images/logo.png`, bannière de l'accueil `images/hero/banner.jpg`, photos de la galerie dans `images/gallery/`
