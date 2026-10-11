@@ -146,3 +146,11 @@ footer .brand-logo{padding:5px 12px}
  .program-item .program-detail-card h3,.program-item .program-detail-card p,.program-item .program-detail-card>span,.program-item .program-detail-card>a{margin-left:22px;margin-right:22px}
  .page-header{background-position:center center}
 }
+
+/* Cartes photo sur la page d'accueil */
+.home-program-card{padding:0;overflow:hidden}
+.home-program-card>i{margin:22px 30px 10px}
+.home-program-card h3,.home-program-card p,.home-program-card>a{margin-left:30px;margin-right:30px}
+.home-program-card>a{margin-bottom:28px}
+.home-program-card .program-photo{height:205px}
+@media(max-width:575px){.home-program-card>i{margin:20px 23px 8px}.home-program-card h3,.home-program-card p,.home-program-card>a{margin-left:23px;margin-right:23px}.home-program-card .program-photo{height:190px}}
