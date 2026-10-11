@@ -33,7 +33,7 @@
 <script>
 (function(){
   var form=document.getElementById('signupForm');
-  // Formule présélectionnée depuis la page Tarifs (?plan=Premium)
+  // Présélection de la formule reçue depuis la page Tarifs ou Karaté (?plan=...)
   var p=new URLSearchParams(location.search).get('plan');
   if(p){var sel=form.elements['plan'];for(var i=0;i<sel.options.length;i++){if(sel.options[i].value===p){sel.selectedIndex=i;break;}}}
   form.addEventListener('submit',function(e){
