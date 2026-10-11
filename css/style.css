@@ -125,13 +125,13 @@ footer{position:relative;overflow:hidden}footer a:hover{color:var(--primary)!imp
 .page-header .container{z-index:1}
 .page-header h1{text-shadow:0 3px 22px rgba(0,0,0,.24)}
 /* Les photos sont traitées de façon homogène et restent légères sur mobile */
-.program-detail-card{padding:0 0 26px;overflow:hidden}
-.program-detail-card>i{margin:22px 26px 10px}
-.program-detail-card h3,.program-detail-card p,.program-detail-card>span,.program-detail-card>a{margin-left:26px;margin-right:26px}
+.program-item .program-detail-card{padding:0 0 26px;overflow:hidden}
+.program-item .program-detail-card>i{margin:22px 26px 10px}
+.program-item .program-detail-card h3,.program-item .program-detail-card p,.program-item .program-detail-card>span,.program-item .program-detail-card>a{margin-left:26px;margin-right:26px}
 .program-photo{height:190px;overflow:hidden;position:relative;background:#151515}
 .program-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.4),transparent 55%);pointer-events:none}
 .program-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.2,.75,.25,1),filter .45s;filter:saturate(.86)}
-.program-detail-card:hover .program-photo img{transform:scale(1.06);filter:saturate(1.08)}
+.program-item .program-detail-card:hover .program-photo img{transform:scale(1.06);filter:saturate(1.08)}
 .coach-card{box-shadow:0 7px 28px rgba(0,0,0,.055)}
 .coach-card img{background:#171717}
 .about-photo,.section .img-fluid.rounded-4{transition:transform .45s ease,box-shadow .45s ease}
@@ -142,7 +142,7 @@ footer{position:relative;overflow:hidden}footer a:hover{color:var(--primary)!imp
 footer .brand-logo{padding:5px 12px}
 @media(max-width:575px){
  .program-photo{height:210px}
- .program-detail-card>i{margin:18px 22px 8px}
- .program-detail-card h3,.program-detail-card p,.program-detail-card>span,.program-detail-card>a{margin-left:22px;margin-right:22px}
+ .program-item .program-detail-card>i{margin:18px 22px 8px}
+ .program-item .program-detail-card h3,.program-item .program-detail-card p,.program-item .program-detail-card>span,.program-item .program-detail-card>a{margin-left:22px;margin-right:22px}
  .page-header{background-position:center center}
 }
