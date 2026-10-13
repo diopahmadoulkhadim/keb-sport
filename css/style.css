@@ -180,9 +180,6 @@ h1,h2,h3,h4{font-family:'Montserrat','Segoe UI',sans-serif;letter-spacing:-.025e
 .home-page .hero .badge-custom:before{background:#f0c747;box-shadow:0 0 12px #d7a900}
 .home-page .hero h1 .hero-title-highlight{box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .12em;background:#d7a900;color:#211900;text-shadow:none}
 .home-page .section.bg-light{background:#fbf8ef!important}
-@media(min-width:992px){
-  .home-page .hero-slide:first-child{object-fit:contain;object-position:right center!important}
-}
 @media(max-width:991px){
   .home-page .hero:before{background:linear-gradient(180deg,rgba(43,34,9,.08) 5%,rgba(43,34,9,.4) 40%,rgba(43,34,9,.84) 100%)}
 }
