@@ -23,6 +23,9 @@ Remplacez chaque élément provisoire. Cochez au fur et à mesure.
 - [ ] Légendes de la galerie (`gallery.html`) : vérifiez qu'elles correspondent aux photos
 
 ## Mise en ligne
-- [ ] Hébergement gratuit (Netlify Drop ou GitHub Pages), puis nom de domaine
+- [x] Publication sur GitHub Pages : https://diopahmadoulkhadim.github.io/keb-sport/
+- [ ] Nom de domaine personnalisé (facultatif)
+- [x] Métadonnées Open Graph et image d'aperçu renseignées sur les pages du site
+- [x] Plan de site : `sitemap.xml`, déclaré dans `robots.txt`
+- [ ] Ajouter le site à Google Search Console et y envoyer `sitemap.xml`
 - [ ] Fiche Google Business
-- [ ] Aperçu des liens partagés : une fois le domaine connu, ajouter dans le `<head>` de chaque page `<meta property="og:image" content="https://VOTRE-DOMAINE/images/hero/banner.jpg">` (et repasser `twitter:card` à `summary_large_image`)

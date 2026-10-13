@@ -20,6 +20,7 @@ Site vitrine responsive pour une salle de sport.
 - Calculateur d'IMC sur l'accueil
 - Galerie avec agrandissement (clic, flèches du clavier, Échap)
 - Balises de partage (Open Graph) et favicon
+- Référencement : titres/descriptions par page, URL canoniques, données structurées et sitemap XML
 
 ## Technologies
 - HTML5
@@ -47,11 +48,11 @@ Les tarifs de coaching personnel, musculation/fitness, karaté et massage sur re
 
 ## Mise en ligne gratuite
 - **Netlify Drop** : glisser le dossier `KEBS-SPORT` sur https://app.netlify.com/drop
-- ou **GitHub Pages** : envoyer le dossier dans un dépôt, puis Settings > Pages
+- Le site est publié sur **GitHub Pages** : https://diopahmadoulkhadim.github.io/keb-sport/
 - Domaine (ex. KEB'SPORT.sn ou .com) : à acheter puis à relier dans les réglages de l'hébergeur
 
 ## Non inclus (nécessite des informations réelles)
 - carte Google Maps (modèle prêt dans un commentaire de `contact.html`)
 - témoignages de membres et moyens de paiement (Wave, Orange Money...)
-- fiche Google Business, formulaire par email (Formspree), sitemap
-
+- inscription du site dans Google Search Console et envoi du sitemap (`sitemap.xml`)
+- fiche Google Business et formulaire par email (Formspree)

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://diopahmadoulkhadim.github.io/keb-sport/sitemap.xml
