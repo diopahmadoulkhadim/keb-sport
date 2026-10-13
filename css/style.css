@@ -42,7 +42,7 @@ body.no-scroll{overflow:hidden}
 
 /* Logo KEB'SPORT (menu et pied de page) : le logo est sur fond blanc, on l'affiche dans une pastille */
 .navbar-brand{padding:0;margin-right:1rem}
-.brand-logo{display:block;height:44px;width:auto;background:#fff;border-radius:10px;padding:4px 10px}
+.brand-logo{display:block;height:56px;width:auto;background:#fff;border-radius:10px;padding:4px 10px}
 footer .brand-logo{height:56px;margin-bottom:6px}
 
 /* En-tête : le texte reste à gauche, le logo de la bannière à droite */
@@ -55,7 +55,7 @@ footer .brand-logo{height:56px;margin-bottom:6px}
   .hero{min-height:auto;align-items:flex-start;padding-bottom:70px;background-position:center 76px;background-size:100% auto}
   .hero-content{padding-top:calc(46.3vw + 100px)}
 }
-@media(max-width:575px){.brand-logo{height:38px}}
+@media(max-width:575px){.brand-logo{height:48px}}
 
 
 /* KEB'SPORT — modernisation visuelle globale */
