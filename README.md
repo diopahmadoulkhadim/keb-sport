@@ -1,4 +1,4 @@
-# KEB'S SPORT
+# KEB'SPORT
 
 Site vitrine responsive pour une salle de sport.
 
@@ -16,7 +16,7 @@ Site vitrine responsive pour une salle de sport.
 ## Fonctions incluses
 - Bouton WhatsApp flottant sur toutes les pages
 - Inscription et contact envoyés via WhatsApp (formule présélectionnée depuis la page Tarifs)
-- Séance d'essai gratuite (accueil + inscription) : **à garder seulement si KEB'S SPORT la propose vraiment**
+- Séance d'essai gratuite (accueil + inscription) : **à garder seulement si KEB'SPORT la propose vraiment**
 - Calculateur d'IMC sur l'accueil
 - Galerie avec agrandissement (clic, flèches du clavier, Échap)
 - Balises de partage (Open Graph) et favicon
@@ -41,14 +41,14 @@ Les tarifs de coaching personnel, musculation/fitness, karaté et massage sur re
 - email
 - confirmer les tarifs et horaires auprès de la salle avant publication
 - noms/photos réels des coachs
-- photos de KEB'S SPORT
+- photos de KEB'SPORT
 - numéro WhatsApp : variable `KEBS_WHATSAPP` en haut de `js/main.js` (utilisée par les formulaires Inscription et Contact)
 - images : logo dans `images/logo.png`, bannière de l'accueil `images/hero/banner.jpg`, photos de la galerie dans `images/gallery/`
 
 ## Mise en ligne gratuite
 - **Netlify Drop** : glisser le dossier `KEBS-SPORT` sur https://app.netlify.com/drop
 - ou **GitHub Pages** : envoyer le dossier dans un dépôt, puis Settings > Pages
-- Domaine (ex. kebssport.sn ou .com) : à acheter puis à relier dans les réglages de l'hébergeur
+- Domaine (ex. KEB'SPORT.sn ou .com) : à acheter puis à relier dans les réglages de l'hébergeur
 
 ## Non inclus (nécessite des informations réelles)
 - carte Google Maps (modèle prêt dans un commentaire de `contact.html`)

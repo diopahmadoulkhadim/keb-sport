@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wa = document.createElement('a');
   wa.className = 'whatsapp-float';
   wa.href = 'https://wa.me/' + KEBS_WHATSAPP + '?text=' +
-    encodeURIComponent("Bonjour KEB'S SPORT, j'aimerais avoir des informations.");
+    encodeURIComponent("Bonjour KEB'SPORT, j'aimerais avoir des informations.");
   wa.target = '_blank';
   wa.rel = 'noopener';
   wa.setAttribute('aria-label', 'Discuter avec KEB\'S SPORT sur WhatsApp');
@@ -57,6 +57,83 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.12 });
     items.forEach(el => { el.classList.add('scroll-animation'); observer.observe(el); });
   }
+
+  /* ---------- Bannière d'accueil : rotation des photos ---------- */
+  const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
+  if (heroSlides.length > 1) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let currentSlide = heroSlides.findIndex(slide => slide.classList.contains('active'));
+    let heroTimer;
+    const stopHero = () => window.clearInterval(heroTimer);
+    const startHero = () => {
+      stopHero();
+      if (reducedMotion.matches || document.hidden) return;
+      heroTimer = window.setInterval(() => {
+        heroSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].classList.add('active');
+      }, 5000);
+    };
+    reducedMotion.addEventListener('change', startHero);
+    document.addEventListener('visibilitychange', startHero);
+    startHero();
+  }
+
+  /* ---------- Galerie : carrousel automatique et contrôles manuels ---------- */
+  document.querySelectorAll('[data-gallery-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('[data-gallery-track]');
+    const slides = Array.from(track.querySelectorAll('.gallery-item'));
+    const indicators = carousel.querySelector('[data-gallery-indicators]');
+    const previous = carousel.querySelector('[data-gallery-previous]');
+    const next = carousel.querySelector('[data-gallery-next]');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let timer;
+
+    const goTo = index => {
+      current = (index + slides.length) % slides.length;
+      track.scrollTo({
+        left: slides[current].offsetLeft - slides[0].offsetLeft,
+        behavior: reducedMotion.matches ? 'auto' : 'smooth'
+      });
+      indicators.querySelectorAll('button').forEach((button, i) => {
+        button.classList.toggle('active', i === current);
+        button.setAttribute('aria-current', i === current ? 'true' : 'false');
+      });
+    };
+
+    slides.forEach((slide, index) => {
+      const indicator = document.createElement('button');
+      indicator.type = 'button';
+      indicator.setAttribute('aria-label', 'Afficher la photo ' + (index + 1));
+      indicator.addEventListener('click', () => goTo(index));
+      indicators.appendChild(indicator);
+    });
+
+    previous.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+
+    const stop = () => window.clearInterval(timer);
+    const start = () => {
+      stop();
+      if (!reducedMotion.matches) timer = window.setInterval(() => goTo(current + 1), 4500);
+    };
+
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', event => {
+      if (!carousel.contains(event.relatedTarget)) start();
+    });
+    reducedMotion.addEventListener('change', start);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop();
+      else if (!carousel.matches(':hover') && !carousel.contains(document.activeElement)) start();
+    });
+
+    goTo(0);
+    start();
+  });
 
   /* ---------- Galerie : agrandissement des photos ---------- */
   const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));

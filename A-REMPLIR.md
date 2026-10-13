@@ -4,7 +4,7 @@ Remplacez chaque élément provisoire. Cochez au fur et à mesure.
 
 ## Contact (à changer partout)
 - [x] Numéro WhatsApp et téléphone affiché : 77 470 05 54 (Mawoury Ba, gérante) : `js/main.js` (`KEBS_WHATSAPP`), `index.html`, `about.html`, `contact.html`
-- [ ] Email `contact@kebssport.sn` : `index.html`, `about.html`, `contact.html`
+- [ ] Email `contact@KEB'SPORT.sn` : `index.html`, `about.html`, `contact.html`
 - [ ] Adresse (actuellement « Sénégal ») et horaires `06h00 – 22h00` : `contact.html`
 - [ ] Carte Google Maps : bloc `map-box` et commentaire modèle dans `contact.html`
 
